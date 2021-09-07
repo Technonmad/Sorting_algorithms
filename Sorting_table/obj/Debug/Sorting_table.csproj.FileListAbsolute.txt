@@ -1,0 +1,10 @@
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\bin\Debug\Sorting_table.exe.config
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\bin\Debug\Sorting_table.exe
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\bin\Debug\Sorting_table.pdb
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\obj\Debug\Sorting_table.csprojAssemblyReference.cache
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\obj\Debug\Sorting_table.Form1.resources
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\obj\Debug\Sorting_table.Properties.Resources.resources
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\obj\Debug\Sorting_table.csproj.GenerateResource.cache
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\obj\Debug\Sorting_table.csproj.CoreCompileInputs.cache
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\obj\Debug\Sorting_table.exe
+C:\Users\Anton\source\repos\Sorting_table\Sorting_table\obj\Debug\Sorting_table.pdb
