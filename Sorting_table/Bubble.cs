@@ -8,21 +8,27 @@ namespace Sorting_table
 {
     class Bubble
     {
-        int tmp;
 
         //переделать пузырек
         
         public void DoSorting(int[] arr)
         {
-           
-            for (int i = 0; i < arr.Length - 1; i++)
+
             {
-                if (arr[i] > arr[i + 1])
+                int tmp;
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    tmp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = tmp;
+                    for (int j = i + 1; j < arr.Length; j++)
+                    {
+                        if (arr[i] > arr[j])
+                        {
+                            tmp = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = tmp;
+                        }
+                    }
                 }
+                
             }
 
         }
