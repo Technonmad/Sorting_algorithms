@@ -9,6 +9,8 @@ namespace Sorting_table
     class Bubble
     {
         int tmp;
+
+        //переделать пузырек
         
         public void DoSorting(int[] arr)
         {

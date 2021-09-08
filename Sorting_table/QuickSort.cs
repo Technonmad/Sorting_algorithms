@@ -11,17 +11,27 @@ namespace Sorting_table
         int partition(int[] array, int start, int end)
         {
             int marker = start;
-            for (int i = start; i <= end; i++)
+            int ved = array[(start + end) / 2];
+            int left = start;
+            int right = end;
+            while(left < right)
             {
-                if (array[i] <= array[end])
+
+                while (left < right && array[left] < ved)
+                    left++;
+                while (right > left && array[right] > ved)
+                    right--;
+                if(left <= right)
                 {
-                    int temp = array[marker]; // swap
-                    array[marker] = array[i];
-                    array[i] = temp;
-                    marker += 1;
+                    int tmp = array[left];
+                    array[left] = array[right];
+                    array[right] = tmp;
+
+                    left++;
+                    right--;
                 }
             }
-            return marker - 1;
+            return left;
         }
 
        public void DoSorting(int[] array, int start, int end)
