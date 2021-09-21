@@ -8,23 +8,29 @@ namespace Sorting_table
 {
     class Bubble
     {
-        int tmp;
 
-        //переделать пузырек
+        public delegate void Progress(int x);
+        public Progress progress;
         
         public void DoSorting(int[] arr)
         {
-           
-            for (int i = 0; i < arr.Length - 1; i++)
+            progress(0);
+            int tmp, process;
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] > arr[i + 1])
+                process = i * 100 / arr.Length;
+                for (int j = i + 1; j < arr.Length; j++)
                 {
-                    tmp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = tmp;
+                    if (arr[i] > arr[j])
+                    {
+                        tmp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = tmp;
+                    }
                 }
+                progress(process);
             }
-
+            progress(100);
         }
 
     }

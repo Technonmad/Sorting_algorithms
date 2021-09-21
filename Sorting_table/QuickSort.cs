@@ -8,6 +8,9 @@ namespace Sorting_table
 {
     class QuickSort
     {
+        public delegate void Progress(int x);
+        public Progress progress;
+        public int process;
         int partition(int[] array, int start, int end)
         {
             int marker = start;
@@ -29,6 +32,7 @@ namespace Sorting_table
 
                     left++;
                     right--;
+
                 }
             }
             return left;
@@ -36,10 +40,13 @@ namespace Sorting_table
 
        public void DoSorting(int[] array, int start, int end)
         {
+            progress(0);
             if (start >= end)
             {
+                progress(100);
                 return;
             }
+             
             int pivot = partition(array, start, end);
             DoSorting(array, start, pivot - 1);
             DoSorting(array, pivot + 1, end);

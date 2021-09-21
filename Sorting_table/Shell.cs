@@ -8,11 +8,15 @@ namespace Sorting_table
 {
     class Shell
     {
-        int tmp, j;
+        int tmp, j, process;
+        public delegate void Progress(int x);
+        public Progress progress;
         public void DoSorting(int[] arr)
         {
-            for(int step = arr.Length / 2; step > 0; step /= 2)
+            progress(0);
+            for (int step = arr.Length / 2; step > 0; step /= 2)
             {
+                process = step * 100 / arr.Length;
                 for(int i = step; i < arr.Length; i++)
                 {
                     tmp = arr[i];
@@ -25,7 +29,9 @@ namespace Sorting_table
                     }
                     arr[j] = tmp;
                 }
+                progress(process);
             }
+            progress(100);
         }
     }
 }
